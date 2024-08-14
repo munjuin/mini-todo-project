@@ -14,8 +14,10 @@ export default function AddTodo({ addItem }) {
 
   const enterKeyEventHandler = (e) => {
     if (e.key === "Enter") {
-      setTodoItem(true);
-      setTodoItem(e.target.value);
+      addItem({ title: e.target.value });
+      setTodoItem({
+        title: "", // 상태 초기화
+      });
     }
   };
   return (
