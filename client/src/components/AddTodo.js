@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/AddTodo.scss";
 
 export default function AddTodo({ addItem }) {
   const [todoItem, setTodoItem] = useState({
@@ -16,7 +17,7 @@ export default function AddTodo({ addItem }) {
     if (e.key === "Enter") {
       addItem({ title: e.target.value });
       setTodoItem({
-        title: "", // 상태 초기화
+        title: "",
       });
     }
   };
